@@ -30,3 +30,37 @@ It demonstrates core **Operating System** and **Networking** concepts including:
 ---
 
 ## 🧩 Architecture
+    ┌──────────────┐       ┌──────────────┐
+    │   Web Proxy  │──────▶│   Web Server │
+    │ (Multithread)│       └──────────────┘
+    │     │
+    │     ▼
+    │   LRU Cache
+    │
+    ▼
+ Multiple Clients
+
+Each client request spawns a new thread. The proxy checks its cache:
+- **Cache Hit:** Return response from memory  
+- **Cache Miss:** Fetch from web server → store in cache → send to client  
+
+---
+
+## 🧾 Example Flow
+1. Client requests `www.example.com`  
+2. Proxy checks the cache  
+3. If cached → returns cached response  
+4. If not cached → fetches from web server, caches it, then returns response  
+
+---
+
+## 🛠️ Technologies Used
+- **Language:** C / C++  
+- **Threading Library:** pthread  
+- **Synchronization:** mutex, semaphore  
+- **Networking:** socket, bind, listen, accept, connect, send, recv  
+- **Cache:** Hash Map + Doubly Linked List  
+
+---
+
+
