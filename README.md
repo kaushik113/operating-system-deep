@@ -24,7 +24,7 @@ It demonstrates core **Operating System** and **Networking** concepts including:
 - **Multithreading:** Efficient request handling using pthreads  
 - **Synchronization:** Mutex and semaphore for safe concurrent access  
 - **Socket Programming:** Handles HTTP requests over TCP/IP  
-- **LRU Cache:** Hash Map + Doubly Linked List implementation  
+- **LRU Cache:** Linked List implementation  
 - **File I/O:** For caching and request logging  
 
 ---
